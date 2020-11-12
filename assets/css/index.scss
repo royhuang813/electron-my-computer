@@ -72,11 +72,39 @@ html,body {
     min-height: 700px;
 
     #aside {
+      flex-shrink: 0;
       width: 180px;
       border-right: 1px solid #e3e3e3;
     }
     #main {
-      flex-grow: 1;
+      padding: 20px 10px;
+      .show-content {
+        .directory {
+          display: flex;
+          flex-wrap: wrap;
+          .box {
+            margin: 2px;
+            width: 250px;
+            border: 1px solid transparent;
+            &:hover {
+              background-color:#d8eaf9;
+              // background-color:#cce8ff;
+              // border: #99d1ff;;
+            }
+            &:active {
+              background-color:#cce8ff;
+              border: 1px solid #99d1ff;
+            }
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+        .disk {
+
+        }
+      }
     }
   }
 }

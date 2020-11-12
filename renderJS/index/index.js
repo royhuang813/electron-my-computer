@@ -1,16 +1,25 @@
-const {
-  BrowserWindow
-} = require('electron').remote
+const { BrowserWindow } = require('electron').remote
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const exec = require('child_process').exec;
 
 let main = {
   dom: {
     HEADER: $('#header'),
     MIN_BTN: $('.min-btn'),
     MAX_BTN: $('.max-btn'),
-    CLOSE_BTN: $('.close-btn')
+    CLOSE_BTN: $('.close-btn'),
+    CATALOGUE_INPUT: $('.catalogue'),
+    SEARCH_INPUT: $('.search')
+  },
+  temp:{
+    document(){
+
+    },
+    disk(){
+
+    }
   },
   init() {
     this.eventListener();
@@ -50,7 +59,8 @@ let main = {
       let className = $(this).attr('class');
       $(`.${className}`).css('filter', '')
     })
-  }
+  },
+  
 }
 
 
@@ -62,7 +72,10 @@ try {
   let homedir = os.homedir()
   console.log(homedir)
   // getDir(homedir)
+  console.log('x',showDisk());
+  $('.disk').text(showDisk());
 
+  // let data = fs.readFileSync('C:\\Users\\roy\\Desktop\\1.txt', 'utf8');
   let data = fs.readFileSync('C:\\Users\\roy\\Desktop\\1.txt', 'utf8');
   console.log(data)
 
@@ -75,4 +88,19 @@ async function getDir(path) {
   for await (const dirent of dir) {
     console.log(dirent.name);
   }
+}
+
+function showDisk(){
+  exec('wmic logicaldisk get name,Description,filesystem,size,freespace  /format:list', (err, stdout, stderr)=>{
+    if(err){
+      console.error(`exec error: ${err}`)
+      return;
+    }
+    console.log('r',stdout)
+    $('.disk').text(stdout);
+    return stdout
+    let aLines = stdout.split('\r\r\n');
+    console.log(`stdout: ${aLines}`);
+    console.error(`stderr: ${stderr}`);
+  })
 }

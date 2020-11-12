@@ -88,12 +88,38 @@ html, body {
 }
 
 #container #content #aside {
+  flex-shrink: 0;
   width: 180px;
   border-right: 1px solid #e3e3e3;
 }
 
 #container #content #main {
-  flex-grow: 1;
+  padding: 20px 10px;
+}
+
+#container #content #main .show-content .directory {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container #content #main .show-content .directory .box {
+  margin: 2px;
+  width: 250px;
+  border: 1px solid transparent;
+}
+
+#container #content #main .show-content .directory .box:hover {
+  background-color: #d8eaf9;
+}
+
+#container #content #main .show-content .directory .box:active {
+  background-color: #cce8ff;
+  border: 1px solid #99d1ff;
+}
+
+#container #content #main .show-content .directory .box img {
+  width: 50px;
+  height: 50px;
 }
 
 #footer {
