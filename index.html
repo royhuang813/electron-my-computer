@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的电脑</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="./node_modules/jquery/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <header id="header">
+    <span class="logo glyphicon glyphicon-apple" aria-hidden="true"></span>
+    <ul class="window-btn-group">
+      <li class="min-btn"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></li>
+      <li class="max-btn"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></li>
+      <li class="close-btn"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></li>
+    </ul>
+  </header>
+  <div id="container">
+    <nav id="nav">
+      <ul class="back-go-btn-group">
+        <li><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></li>
+        <li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></li>
+        <li><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></li>
+      </ul>
+      <input class="catalogue" type="search" name="" id="" placeholder='当前路径'>
+      <input class="search" type="search" name="" id="" placeholder='搜索 "此电脑"'>
+    </nav>
+    <div id="content">
+      <aside id="aside">
+        <h1>侧边栏目录</h1>
+      </aside>
+      <main id="main"></main>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <script src="./renderJS/index/index.js"></script>
+</body>
+
+</html>
