@@ -77,8 +77,33 @@ html,body {
       border-right: 1px solid #e3e3e3;
     }
     #main {
-      padding: 20px 10px;
+      padding: 20px 0 0 10px;
+      width: 100%;
       .show-content {
+        width: 100%;
+        .type-title {
+          display: flex;
+          align-items: center;
+          border: 1px solid transparent;
+          &:hover {
+            background-color:#d8eaf9;
+          }
+          &:active {
+            background-color:#cce8ff;
+            border: 1px solid #99d1ff;
+          }
+          .type-name {
+            flex-shrink: 0;
+            padding: 0 10px 0 0;
+            color: #1e3287;
+            font-size: 16px;
+          }
+          .line{
+            width: 100%;
+            height: 1px;
+            background-color: #c3c3c3;
+          }
+        }
         .directory {
           display: flex;
           flex-wrap: wrap;
@@ -88,8 +113,6 @@ html,body {
             border: 1px solid transparent;
             &:hover {
               background-color:#d8eaf9;
-              // background-color:#cce8ff;
-              // border: #99d1ff;;
             }
             &:active {
               background-color:#cce8ff;
@@ -102,7 +125,97 @@ html,body {
           }
         }
         .disk {
+          display: flex;
+          flex-wrap: wrap;
+          .box {
+            display: flex;
+            padding: 0 4px;
+            margin: 2px;
+            width: 250px;
+            border: 1px solid transparent;
+            &:hover {
+              background-color:#d8eaf9;
+            }
+            &:active {
+              background-color:#cce8ff;
+              border: 1px solid #99d1ff;
+            }
+            img {
+              width: 50px;
+              height: 50px;
+            }
+            .disk-info {
+              flex-grow: 1;
+              padding: 0 0 0 4px;
+              .disk-name {
 
+              }
+              .disk-ram-bar {
+                position: relative;
+                width: 100%;
+                height: 16px;
+                background-color: #e6e6e6;
+                border: 1px solid #bcbcbc;
+                .bar-content{
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  display: inline-block;
+                  width: 10%;
+                  height: 100%;
+                  background-color: #26a0da;
+                }
+              }
+              .disk-ram-text {
+                color: #6d6d6d;
+              }
+            }
+          }
+        }
+        .table {
+          table-layout:fixed;
+          width: 99.9%;
+          .thead {
+            tr {
+              border: 2px solid transparent;
+            }
+            .th {
+              color: #4c607a;
+              font-size: 14px;
+              font-weight: 400;
+              border-left: 1px solid #e5e5e5;
+              border-bottom: none;
+              &:hover{
+                background-color: #d9ebf9;
+              }
+            }
+          }
+          .tbody {
+            .item {
+                border: 1px solid transparent;
+              &:hover {
+                background-color: #e5f3ff;
+              }
+              &:active {
+                background-color:#cce8ff;
+                border: 1px solid #99d1ff;
+              }
+              .name {
+                width: 20px;
+                height: 20px;
+                font-size: 14px;
+              }
+              .update-date{
+                color: #6d6d6d;
+                font-size: 14px;
+              }
+              .type {
+                color: #6d6d6d;
+                font-size: 14px;
+              }
+              .size {}
+            }
+          }
         }
       }
     }

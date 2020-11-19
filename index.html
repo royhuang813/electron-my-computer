@@ -36,37 +36,74 @@
       </aside>
       <main id="main">
         <div class="show-content">
-          <div class="directory">
-            <div class="box">
+          <!-- <table class="table">
+            <thead class="thead">
+              <tr>
+                <th class="th">名称</th>
+                <th class="th">修改日期</th>
+                <th class="th">类型</th>
+                <th class="th">大小</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr class="item" data-path="qq/">
+                <td><img class="name" src="./assets/img/directory.png" alt="">qq</td>
+                <td class="update-date">2020/11/19 19:23</td>
+                <td class="type">文件夹</td>
+                <td class="size"></td>
+              </tr>
+            </tbody>
+          </table> -->
+          <p class="type-title">
+            <span class="type-name">文件夹(x)</span>
+            <span class="line"></span>
+          </p>
+          <ul class="directory">
+            <li class="box">
               <img src="./assets/img/3dObject.png" alt="">
               <span>3D对象</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/video.png" alt="">
               <span>视频</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/picture.png" alt="">
               <span>图片</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/document.png" alt="">
               <span>文档</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/download.png" alt="">
               <span>下载</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/music.png" alt="">
               <span>音乐</span>
-            </div>
-            <div class="box">
+            </li>
+            <li class="box">
               <img src="./assets/img/desktop.png" alt="">
               <span>桌面</span>
-            </div>
-          </div>
-          <div class="disk"></div>
+            </li>
+          </ul>
+          <p class="type-title">
+            <span class="type-name">设备和驱动器(<span class="dev-total"></span>)</span>
+            <span class="line"></span>
+          </p>
+          <ul class="disk">
+            <li class="box" data-path="C:/">
+              <img src="./assets/img/disk.png" alt="">
+              <div class="disk-info">
+                <span class="disk-name">Windows (C:)</span>
+                <div class="disk-ram-bar">
+                  <div class="bar-content"></div>
+                </div>
+                <span class="disk-ram-text">51.1GB可用，共126GB</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </main>
     </div>

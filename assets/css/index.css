@@ -94,7 +94,40 @@ html, body {
 }
 
 #container #content #main {
-  padding: 20px 10px;
+  padding: 20px 0 0 10px;
+  width: 100%;
+}
+
+#container #content #main .show-content {
+  width: 100%;
+}
+
+#container #content #main .show-content .type-title {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+#container #content #main .show-content .type-title:hover {
+  background-color: #d8eaf9;
+}
+
+#container #content #main .show-content .type-title:active {
+  background-color: #cce8ff;
+  border: 1px solid #99d1ff;
+}
+
+#container #content #main .show-content .type-title .type-name {
+  flex-shrink: 0;
+  padding: 0 10px 0 0;
+  color: #1e3287;
+  font-size: 16px;
+}
+
+#container #content #main .show-content .type-title .line {
+  width: 100%;
+  height: 1px;
+  background-color: #c3c3c3;
 }
 
 #container #content #main .show-content .directory {
@@ -120,6 +153,110 @@ html, body {
 #container #content #main .show-content .directory .box img {
   width: 50px;
   height: 50px;
+}
+
+#container #content #main .show-content .disk {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#container #content #main .show-content .disk .box {
+  display: flex;
+  padding: 0 4px;
+  margin: 2px;
+  width: 250px;
+  border: 1px solid transparent;
+}
+
+#container #content #main .show-content .disk .box:hover {
+  background-color: #d8eaf9;
+}
+
+#container #content #main .show-content .disk .box:active {
+  background-color: #cce8ff;
+  border: 1px solid #99d1ff;
+}
+
+#container #content #main .show-content .disk .box img {
+  width: 50px;
+  height: 50px;
+}
+
+#container #content #main .show-content .disk .box .disk-info {
+  flex-grow: 1;
+  padding: 0 0 0 4px;
+}
+
+#container #content #main .show-content .disk .box .disk-info .disk-ram-bar {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  background-color: #e6e6e6;
+  border: 1px solid #bcbcbc;
+}
+
+#container #content #main .show-content .disk .box .disk-info .disk-ram-bar .bar-content {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  background-color: #26a0da;
+}
+
+#container #content #main .show-content .disk .box .disk-info .disk-ram-text {
+  color: #6d6d6d;
+}
+
+#container #content #main .show-content .table {
+  table-layout: fixed;
+  width: 99.9%;
+}
+
+#container #content #main .show-content .table .thead tr {
+  border: 2px solid transparent;
+}
+
+#container #content #main .show-content .table .thead .th {
+  color: #4c607a;
+  font-size: 14px;
+  font-weight: 400;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: none;
+}
+
+#container #content #main .show-content .table .thead .th:hover {
+  background-color: #d9ebf9;
+}
+
+#container #content #main .show-content .table .tbody .item {
+  border: 1px solid transparent;
+}
+
+#container #content #main .show-content .table .tbody .item:hover {
+  background-color: #e5f3ff;
+}
+
+#container #content #main .show-content .table .tbody .item:active {
+  background-color: #cce8ff;
+  border: 1px solid #99d1ff;
+}
+
+#container #content #main .show-content .table .tbody .item .name {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+}
+
+#container #content #main .show-content .table .tbody .item .update-date {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+#container #content #main .show-content .table .tbody .item .type {
+  color: #6d6d6d;
+  font-size: 14px;
 }
 
 #footer {
